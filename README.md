@@ -2,6 +2,10 @@
 
 A powerful CLI tool to generate Express.js boilerplate with TypeScript, supporting both feature-based and service-based architectures.
 
+```bash
+npm i -g express-ts-prod
+```
+
 ## Features
 
 - ✅ **Feature-based Architecture** - Organize code by business domains
@@ -14,10 +18,6 @@ A powerful CLI tool to generate Express.js boilerplate with TypeScript, supporti
 ## Quick Start
 
 ### Installation
-
-```bash
-npm i -g express-ts-prod
-```
 
 ### Using npx (Recommended)
 
