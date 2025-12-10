@@ -25,6 +25,32 @@ npm i -g express-ts-prod
 npx express-ts new my-app
 ```
 
+## 📖 Usage
+
+### Create a New Project
+
+```bash
+# Interactive mode (recommended)
+express-ts new project-name
+
+# With options
+express-ts new my-api --architecture feature --database mongodb
+
+# With enterprise features
+express-ts new my-app --with-auth --with-docker --with-ci --with-monitoring
+
+```
+
+## Generate Features
+
+```bash
+cd my-app
+express-ts generate feature users
+express-ts generate feature products
+express-ts generate feature orders
+
+```
+
 ## Available Options
 
 ```bash
