@@ -19,6 +19,30 @@ A powerful CLI tool to generate Express.js boilerplate with TypeScript, supporti
 npx express-ts new my-app
 ```
 
+## 🏗️ Project Structures
+
+### Feature-Based (Recommended)
+
+src/features/
+├── users/
+│ ├── users.controller.ts
+│ ├── users.service.ts
+│ ├── users.routes.ts
+│ ├── users.types.ts
+│ ├── users.validation.ts
+│ └── users.model.ts
+└── products/
+
+## Service-Based
+
+src/
+├── controllers/
+├── services/
+├── models/
+├── routes/
+├── middlewares/
+└── config/
+
 ## 🧪 Development
 
 cd my-app
