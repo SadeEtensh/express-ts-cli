@@ -19,7 +19,31 @@ A powerful CLI tool to generate Express.js boilerplate with TypeScript, supporti
 npx express-ts new my-app
 ```
 
-Database Support
+## 🧪 Development
+
+cd my-app
+npm install
+npm run dev # Start development server
+npm run build # Build for production
+npm test # Run tests
+npm run test:coverage # Test with coverage
+
+## 📊 What's Included
+
+## Base Setup
+
+✅ Express.js with TypeScript
+
+✅ TypeScript strict configuration
+
+✅ Environment variables (.env)
+
+✅ ESLint + Prettier
+
+✅ Git ignore
+
+## Database Support
+
 MongoDB: Mongoose with schemas
 
 PostgreSQL: pg with connection pooling
@@ -28,7 +52,8 @@ MySQL: mysql2 with promises
 
 None: No database setup
 
-Enterprise Features
+## Enterprise Features
+
 ✅ Authentication (JWT, bcrypt)
 
 ✅ File upload handling
@@ -43,10 +68,12 @@ Enterprise Features
 🤝 Contributing
 We welcome contributions! Please see CONTRIBUTING.md for details.
 
-📄 License
+## 📄 License
+
 MIT License - see LICENSE file for details.
 
-❤️ Support
+## ❤️ Support
+
 Issues: GitHub Issues
 
 Discussions: GitHub Discussions
