@@ -25,6 +25,18 @@ npm i -g express-ts-prod
 npx express-ts new my-app
 ```
 
+## ✨ Features
+
+✅ Feature-Based & Service-Based architectures
+
+✅ Multiple Databases: MongoDB, PostgreSQL, MySQL, or None
+
+✅ Enterprise Ready: Security, Docker, CI/CD, Monitoring
+
+✅ TypeScript Excellence: Strict configuration, full type safety
+
+✅ Production Features: Logging, error handling, validation, testing
+
 ## 📖 Usage
 
 ### Create a New Project
