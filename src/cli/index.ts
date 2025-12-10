@@ -81,12 +81,12 @@ program
   .action(async (type, name) => {
     try {
       if (type === "feature") {
+        // Use process.cwd() to get the current working directory
         await generateFeatureBasedStructure(process.cwd(), name);
         console.log(
           chalk.green(`✅ Feature '${name}' generated successfully!`)
         );
       } else if (type === "service") {
-        // For service generation in service-based architecture
         console.log(
           chalk.yellow(
             "ℹ️  Service-based architecture uses centralized services."
@@ -102,5 +102,33 @@ program
       console.error(chalk.red("Error generating component:"), error);
     }
   });
+
+// program
+//   .command("generate <type> <name>")
+//   .description("Generate a new feature/service component")
+//   .action(async (type, name) => {
+//     try {
+//       if (type === "feature") {
+//         await generateFeatureBasedStructure(process.cwd(), name);
+//         console.log(
+//           chalk.green(`✅ Feature '${name}' generated successfully!`)
+//         );
+//       } else if (type === "service") {
+//         // For service generation in service-based architecture
+//         console.log(
+//           chalk.yellow(
+//             "ℹ️  Service-based architecture uses centralized services."
+//           )
+//         );
+//         console.log(
+//           chalk.yellow("   Add your service logic in src/services/ directory.")
+//         );
+//       } else {
+//         console.log(chalk.red('❌ Invalid type. Use "feature" or "service"'));
+//       }
+//     } catch (error) {
+//       console.error(chalk.red("Error generating component:"), error);
+//     }
+//   });
 
 program.parse();

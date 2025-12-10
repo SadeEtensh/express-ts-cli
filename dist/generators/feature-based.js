@@ -15,6 +15,16 @@ async function generateFeatureBasedStructure(projectPath, featureName) {
     }
 }
 exports.generateFeatureBasedStructure = generateFeatureBasedStructure;
+// export async function generateFeatureBasedStructure(
+//   projectPath: string,
+//   featureName?: string
+// ): Promise<void> {
+//   if (featureName) {
+//     await generateFeature(projectPath, featureName);
+//   } else {
+//     await generateInitialFeatureStructure(projectPath);
+//   }
+// }
 async function generateInitialFeatureStructure(projectPath) {
     const featureStructure = {
         // Health feature
@@ -43,6 +53,10 @@ async function generateInitialFeatureStructure(projectPath) {
 }
 async function generateFeature(projectPath, featureName) {
     const featureDir = path_1.default.join(projectPath, "src", "features", featureName);
+    // Check if we're in a valid project structure
+    if (!(await isValidProjectStructure(projectPath))) {
+        throw new Error("Not a valid express-ts project. Please run this command in a project created with express-ts.");
+    }
     const featureFiles = {
         [`${featureName}.controller.ts`]: generateFeatureController(featureName),
         [`${featureName}.service.ts`]: generateFeatureService(featureName),
@@ -59,6 +73,43 @@ async function generateFeature(projectPath, featureName) {
     // Update routes index
     await updateRoutesIndex(projectPath, featureName);
 }
+// Helper function to validate project structure
+async function isValidProjectStructure(projectPath) {
+    const requiredPaths = [
+        "src/features",
+        "src/routes",
+        "package.json",
+        "tsconfig.json",
+    ];
+    for (const requiredPath of requiredPaths) {
+        const fullPath = path_1.default.join(projectPath, requiredPath);
+        if (!(await fs_extra_1.default.pathExists(fullPath))) {
+            return false;
+        }
+    }
+    return true;
+}
+// async function generateFeature(
+//   projectPath: string,
+//   featureName: string
+// ): Promise<void> {
+//   const featureDir = path.join(projectPath, "src", "features", featureName);
+//   const featureFiles = {
+//     [`${featureName}.controller.ts`]: generateFeatureController(featureName),
+//     [`${featureName}.service.ts`]: generateFeatureService(featureName),
+//     [`${featureName}.routes.ts`]: generateFeatureRoutes(featureName),
+//     [`${featureName}.types.ts`]: generateFeatureTypes(featureName),
+//     [`${featureName}.validation.ts`]: generateFeatureValidation(featureName),
+//     [`${featureName}.model.ts`]: generateFeatureModel(featureName),
+//   };
+//   await fs.ensureDir(featureDir);
+//   for (const [fileName, content] of Object.entries(featureFiles)) {
+//     const filePath = path.join(featureDir, fileName);
+//     await fs.writeFile(filePath, content);
+//   }
+//   // Update routes index
+//   await updateRoutesIndex(projectPath, featureName);
+// }
 // Template generators for feature files
 function generateHealthController() {
     return `import { Request, Response } from 'express';
