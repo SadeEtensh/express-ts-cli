@@ -23,7 +23,10 @@ npm i -g express-ts-prod
 
 ```bash
 npx express-ts new my-app
-![alt text](image.png)
+? Choose project architecture: (Use arrow keys)
+❯ Feature-based
+  Service-based
+
 ```
 
 ## ✨ Features
