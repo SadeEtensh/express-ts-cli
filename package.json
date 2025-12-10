@@ -1,5 +1,5 @@
 {
-  "name": "express-ts-cli",
+  "name": "express-ts-prod",
   "version": "1.0.0",
   "description": "A CLI tool to generate feature-based and service-based Express.js boilerplate with TypeScript",
   "main": "dist/cli/index.js",
