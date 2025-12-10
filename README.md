@@ -23,6 +23,7 @@ npm i -g express-ts-prod
 
 ```bash
 npx express-ts new my-app
+![alt text](image.png)
 ```
 
 ## ✨ Features
