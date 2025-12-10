@@ -36,7 +36,7 @@ express-ts new project-name
 # With options
 express-ts new my-api --architecture feature --database mongodb
 
-# With enterprise features
+# With enterprise features:- Comming Soon
 express-ts new my-app --with-auth --with-docker --with-ci --with-monitoring
 
 ```
@@ -60,7 +60,7 @@ express-ts generate feature orders
 # Database
 --database, -d        mongodb | postgresql | mysql | none (default: mongodb)
 
-# Enterprise Features
+# Enterprise Features: Comming Soon
 --with-auth          Add authentication system
 --with-docker        Add Docker configuration
 --with-ci           Add CI/CD pipeline
