@@ -23,6 +23,7 @@ npx express-ts new my-app
 
 ### Feature-Based (Recommended)
 
+```bash
 src/features/
 ├── users/
 │ ├── users.controller.ts
@@ -32,9 +33,11 @@ src/features/
 │ ├── users.validation.ts
 │ └── users.model.ts
 └── products/
+```
 
 ## Service-Based
 
+```bash
 src/
 ├── controllers/
 ├── services/
@@ -42,6 +45,7 @@ src/
 ├── routes/
 ├── middlewares/
 └── config/
+```
 
 ## 🧪 Development
 
