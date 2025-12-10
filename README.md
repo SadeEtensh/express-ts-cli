@@ -19,6 +19,23 @@ A powerful CLI tool to generate Express.js boilerplate with TypeScript, supporti
 npx express-ts new my-app
 ```
 
+## Available Options
+
+```bash
+# Architecture
+--architecture, -a    feature | service (default: feature)
+
+# Database
+--database, -d        mongodb | postgresql | mysql | none (default: mongodb)
+
+# Enterprise Features
+--with-auth          Add authentication system
+--with-docker        Add Docker configuration
+--with-ci           Add CI/CD pipeline
+--with-monitoring   Add monitoring setup
+--skip-install      Skip npm install
+```
+
 ## 🏗️ Project Structures
 
 ### Feature-Based (Recommended)
